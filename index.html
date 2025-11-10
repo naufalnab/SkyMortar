@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkyMortar</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img src="/assets/images/logo.png" alt="SkyMortar" class="logo-img" />
+        </div>
+
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#beranda" class="nav-link">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a href="#produk" class="nav-link">Produk Kami</a>
+          </li>
+          <li class="nav-item">
+            <a href="#kalkulator" class="nav-link">Kalkulator</a>
+          </li>
+          <li class="nav-item">
+            <a href="#berita" class="nav-link">Berita & Artikel</a>
+          </li>
+          <li class="nav-item">
+            <a href="#tentang" class="nav-link">Tentang Kami</a>
+          </li>
+        </ul>
+
+        <div class="nav-cta">
+          <a href="#hubungi" class="cta-button">
+            <span class="cta-text">Hubungi Kami</span>
+            <img
+              src="/assets/images/phone.png"
+              alt="Phone"
+              class="phone-icon"
+            />
+          </a>
+        </div>
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+
+      <div class="mobile-menu">
+        <ul class="mobile-menu-list">
+          <li><a href="#beranda" class="mobile-link">Beranda</a></li>
+          <li><a href="#produk" class="mobile-link">Produk Kami</a></li>
+          <li><a href="#kalkulator" class="mobile-link">Kalkulator</a></li>
+          <li><a href="#berita" class="mobile-link">Berita & Artikel</a></li>
+          <li><a href="#tentang" class="mobile-link">Tentang Kami</a></li>
+          <li class="mobile-cta">
+            <a href="#hubungi" class="mobile-cta-button">
+              <img
+                src="/assets/images/phone.png"
+                alt="Phone"
+                class="mobile-phone-icon"
+              />
+              Hubungi Kami
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="main-carousel swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="/assets/images/slide1.png" alt="Slide 1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/images/slide2.png" alt="Slide 2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="/assets/images/slide3.png" alt="Slide 3" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </section>
+
+    <section id="produk" class="product-section">
+      <h2 class="section-title">Produk Kami</h2>
+
+      <div class="product-carousel swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide product-slide">
+            <img src="/assets/images/product1.png" alt="Perekat Bata Ringan" />
+            <h3>PEREKAT BATA RINGAN</h3>
+            <p>SM-600</p>
+          </div>
+
+          <div class="swiper-slide product-slide">
+            <img src="/assets/images/product2.png" alt="Tile Fix" />
+            <h3>TILE FIX</h3>
+            <p>Perekat Keramik (SM-510)</p>
+          </div>
+
+          <div class="swiper-slide product-slide">
+            <img src="/assets/images/product3.png" alt="Wall Putty" />
+            <h3>WALL PUTTY</h3>
+            <p>Plamir Instan (SM-310)</p>
+          </div>
+
+          <div class="swiper-slide product-slide">
+            <img src="/assets/images/product4.png" alt="Thin Bed" />
+            <h3>THIN BED</h3>
+            <p>Perekat Bata (SM-100)</p>
+          </div>
+
+          <div class="swiper-slide product-slide">
+            <img src="/assets/images/product5.png" alt="Plester" />
+            <h3>PLESTER</h3>
+            <p>Wall Plaster (SM-200)</p>
+          </div>
+
+          <div class="swiper-slide product-slide">
+            <img src="/assets/images/product6.png" alt="White Skimcoat" />
+            <h3>WHITE SKIMCOAT</h3>
+            <p>Acian Putih (SM-420)</p>
+          </div>
+
+          <div class="swiper-slide product-slide">
+            <img src="/assets/images/product7.png" alt="Skimcoat" />
+            <h3>SKIMCOAT</h3>
+            <p>Acian Abu-abu (SM-410)</p>
+          </div>
+        </div>
+
+        <div class="swiper-pagination product-pagination"></div>
+
+        <div class="swiper-button-next product-nav-next"></div>
+        <div class="swiper-button-prev product-nav-prev"></div>
+      </div>
+    </section>
+
+    <section id="tentang" class="about-section">
+      <h2 class="section-title about-title-centered">Tentang Sky Mortar</h2>
+
+      <div class="about-container">
+        <img
+          src="/assets/images/about-1.jpg"
+          alt="Pabrik Sky Mortar"
+          class="about-img about-img-tall"
+        />
+
+        <div class="about-col-right">
+          <img
+            src="/assets/images/about-2.jpg"
+            alt="Proyek Konstruksi Sky Mortar"
+            class="about-img"
+          />
+          <div class="about-stats">
+            <div class="stat-item">
+              <h3>7+</h3>
+              <p>Tahun Pengalaman</p>
+            </div>
+            <div class="stat-item">
+              <h3>4,5+</h3>
+              <p>Pelanggan Puas</p>
+            </div>
+            <div class="stat-item stat-item-full-width">
+              <h3>1000+</h3>
+              <p>Proyek di wilayah Indonesia</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right-content">
+          <p>
+            PT. Sky Mortar Indonesia berdiri sejak tahun 2018 dan merupakan
+            salah satu perusahaan yang bergerak di bidang industri bahan
+            bangunan.
+          </p>
+          <p>
+            Produk semen mortar kami dikenal dengan Sky Mortar, dimana setiap
+            bahan baku yang digunakan dalam proses pembuatan produk Sky Mortar
+            selalu menggunakan bahan baku pilihan yang berkualitas dan telah
+            melalui proses pengujian.
+          </p>
+          <a href="#selengkapnya" class="cta-button">
+            Selengkapnya
+            <img
+              src="/assets/images/diagonal-arrow.png"
+              alt="Panah"
+              class="cta-arrow-icon"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="kenapa-pilih" class="why-section">
+      <div class="why-container">
+        <img
+          src="/assets/images/Indonesia.png"
+          alt="Peta Indonesia"
+          class="why-map-img"
+        />
+
+        <div class="why-content-grid">
+          <div class="why-left">
+            <h3 class="why-title">Kenapa Harus Pilih Sky Mortar?</h3>
+            <div class="why-icon-grid">
+              <div class="why-icon-item">
+                <img
+                  src="/assets/images/telah-dipercaya.png"
+                  alt="Telah Dipercaya"
+                />
+              </div>
+              <div class="why-icon-item">
+                <img src="/assets/images/kuat-kokoh.png" alt="Kuat Kokoh" />
+              </div>
+              <div class="why-icon-item">
+                <img
+                  src="/assets/images/mudah-diaplikasikan.png"
+                  alt="Mudah Diaplikasikan"
+                />
+              </div>
+              <div class="why-icon-item">
+                <img
+                  src="/assets/images/efisien-terjangkau.png"
+                  alt="Efisien & Terjangkau"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="why-right">
+            <p>
+              Sky Mortar hadir untuk memenuhi kebutuhan material bangunan dengan
+              jaringan distribusi yang luas dan terpercaya, mencakup banyak
+              wilayah di Indonesia. Dengan sistem logistik yang efisien serta
+              dukungan tim profesional, kami memastikan setiap pasokan tiba
+              tepat waktu, konsisten dalam kualitas, dan tentunya sesuai dengan
+              standar terbaik di industri.
+            </p>
+            <p>
+              Komitmen ini menjadikan Sky Mortar yang dapat diandalkan dalam
+              mendukung kelancaran dan keberhasilan berbagai proyek konstruksi,
+              mulai dari proyek skala kecil hingga pembangunan berskala
+              nasional.
+            </p>
+            <a href="#proyek" class="cta-button">
+              Proyek Kami
+              <img
+                src="/assets/images/diagonal-arrow.png"
+                alt="Panah"
+                class="cta-arrow-icon"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta-banner-section">
+      <div class="cta-banner-content">
+        <h2>Tanyakan Kebutuhanmu</h2>
+        <p>
+          Konsultasikan kebutuhan bangunanmu kepada tim Sky Mortar sekarang!
+        </p>
+        <a href="#hubungi" class="cta-button">
+          Hubungi Sekarang!
+          <img
+            src="/assets/images/diagonal-arrow.png"
+            alt="Panah"
+            class="cta-arrow-icon"
+          />
+        </a>
+      </div>
+    </section>
+    <!-- <section id="berita" class="news-section">
+      <div class="news-container">
+        <h2 class="section-title alt-title">Apa yang baru di Sky Mortar?</h2>
+
+        <div class="news-grid">
+          <div class="news-card-featured">
+            <div class="news-card-img-wrapper">
+              <img src="/assets/images/go-green.png" alt="Go Green" />
+            </div>
+            <div class="news-card-content">
+              <h3>Penghargaan Green Label</h3>
+              <p>
+                Sky Mortar mendapatkan penghargaan sebagai perekat bata ringan
+                yang mudah, ramah lingkungan namun tetap terjamin kualitasnya.
+              </p>
+              <span class="news-card-date">14 Agustus 2025</span>
+            </div>
+          </div>
+
+          <div class="news-col-right">
+            <div class="news-card-small">
+              <div class="news-card-small-img">
+                <img src="/assets/images/desain-rumah.png" alt="Rumah Minimalis" />
+              </div>
+              <div class="news-card-small-content">
+                <h4>5 Desain Rumah Minimalis Kesukaan Generasi Masa Kini</h4>
+                <p class="news-card-excerpt">
+                  Gaya yang simpel namun elegan ini menghadirkan ruang yang
+                  fungsional, nyaman...
+                </p>
+                <span class="news-card-date">12 Agustus 2025</span>
+              </div>
+            </div>
+
+            <div class="news-card-small">
+              <div class="news-card-small-img">
+                <img src="/assets/images/tips-dinding.png" alt="Dinding Rumah Rapi" />
+              </div>
+              <div class="news-card-small-content">
+                <h4>Tips Membuat Dinding Rumah Lebih Rapi dan Kuat</h4>
+                <p class="news-card-excerpt">
+                  Gunakan mortar instan berkualitas untuk hasil plesteran yang
+                  halus dan...
+                </p>
+                <span class="news-card-date">6 Agustus 2025</span>
+              </div>
+            </div>
+
+            <div class="news-card-small">
+              <div class="news-card-small-img">
+                <img src="/assets/images/tren-material.png" alt="Material Bangunan" />
+              </div>
+              <div class="news-card-small-content">
+                <h4>
+                  Tren Material Bangunan yang Banyak Digunakan di Tahun 2025
+                </h4>
+                <p class="news-card-excerpt">
+                  Material ringan dan tahan lama kini jadi primadona. Selain
+                  efisien...
+                </p>
+                <span class="news-card-date">1 Agustus 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

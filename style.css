@@ -1,0 +1,900 @@
+/* Reset & Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Desktop Menu */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #4c1d95;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: #4c1d95;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 25px;
+}
+
+/* CTA Button */
+.cta-button {
+  background: #4c1d95;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(76, 29, 149, 0.3);
+}
+
+.cta-button:hover {
+  background: #3b096c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(76, 29, 149, 0.4);
+}
+
+.phone-icon {
+  width: 18px;
+  height: 18px;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover .phone-icon {
+  animation: phoneRing 0.6s ease-in-out;
+}
+
+@keyframes phoneRing {
+  0%,
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  20% {
+    transform: translateX(-2px) rotate(-10deg);
+  }
+  40% {
+    transform: translateX(2px) rotate(10deg);
+  }
+  60% {
+    transform: translateX(-2px) rotate(-10deg);
+  }
+  80% {
+    transform: translateX(2px) rotate(10deg);
+  }
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 0;
+}
+
+.mobile-menu.active {
+  display: block;
+  animation: slideDown 0.3s ease;
+}
+
+.mobile-link {
+  display: block;
+  padding: 1rem 2rem;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.mobile-link:hover {
+  background: #f7f7ff;
+  color: #4c1d95;
+}
+
+.mobile-cta-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #4c1d95;
+  color: white;
+  padding: 1rem 2rem;
+  margin: 1rem 2rem 0;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  justify-content: center;
+}
+
+.mobile-phone-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* MAIN CAROUSEL */
+.main-carousel {
+  height: 70vh;
+  max-height: 720px;
+}
+
+.main-carousel .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-carousel .swiper-button-next,
+.main-carousel .swiper-button-prev {
+  color: #fff;
+  --swiper-navigation-size: 24px;
+  background-color: rgba(76, 29, 149, 0.5);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.main-carousel .swiper-button-next:hover,
+.main-carousel .swiper-button-prev:hover {
+  background-color: #4c1d95;
+}
+
+.main-carousel .swiper-button-prev {
+  left: 150px;
+}
+
+.main-carousel .swiper-button-next {
+  right: 150px;
+}
+
+.main-carousel .swiper-pagination-bullet-active {
+  background: #4c1d95;
+}
+
+/* PRODUK SECTION */
+.product-section {
+  padding: 80px 2rem 100px;
+  background: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.section-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: #2d3748;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 3.5rem;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #6b46c1, #9f7aea);
+  border-radius: 2px;
+}
+
+/* WRAPPER UNTUK CENTERING */
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/* PRODUCT CAROUSEL STYLES */
+.product-carousel {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+  overflow: hidden;
+}
+
+.product-slide {
+  text-align: center;
+  padding: 1rem;
+  transform: scale(0.8);
+  opacity: 0.5;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.product-slide img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.1));
+}
+
+.swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.product-slide h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.product-slide p {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Custom Pagination & Navigation */
+.product-pagination {
+  bottom: 0px !important;
+}
+
+.product-pagination .swiper-pagination-bullet {
+  background: #c4c4c4;
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
+.product-pagination .swiper-pagination-bullet-active {
+  background: #4c1d95;
+  width: 12px;
+  height: 12px;
+}
+
+.product-nav-next,
+.product-nav-prev {
+  color: #4c1d95;
+  --swiper-navigation-size: 28px;
+}
+
+.stat-card {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.stat-card.full-width {
+  grid-column: 1 / -1;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: #4a5568;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  padding: 80px 2rem;
+  background: #fff;
+  overflow: hidden;
+  text-align: center; /* Rata tengah judul */
+}
+
+.about-title-centered {
+  display: inline-block;
+  margin-bottom: 3.5rem; /* Jarak antara judul dan grid di bawahnya */
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 kolom */
+  gap: 2rem; /* Jarak antar kolom */
+  align-items: start; /* Rata ATAS semua kolom */
+  text-align: left; /* Mengembalikan perataan teks ke kiri untuk konten grid */
+}
+
+/* Kelas umum untuk gambar */
+.about-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.03);
+}
+
+/* Gambar kiri yang tinggi */
+.about-img-tall {
+  height: 100%;
+}
+
+/* Kolom 2: Gambar + Statistik */
+.about-col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Atur tinggi gambar kanan atas */
+.about-col-right .about-img {
+  height: 320px;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2d3748;
+  line-height: 1.2;
+}
+
+.stat-item p {
+  font-size: 0.9rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.stat-item-full-width {
+  grid-column: 1 / -1;
+}
+
+/* Kolom 3: Teks Penjelasan */
+.about-right-content {
+  /* Tidak perlu style khusus, grid sudah menangani */
+}
+
+.about-right-content p {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.cta-arrow-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover .cta-arrow-icon {
+  transform: translateX(3px);
+}
+
+/* WHY CHOOSE US SECTION */
+.why-section {
+  padding: 80px 2rem;
+  background: #fff; /* Sesuai screenshot, beda dari body */
+  overflow: hidden;
+}
+
+.why-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-map-img {
+  width: 100%;
+  max-width: 900px; /* Lebar peta */
+  display: block;
+  margin: 0 auto 3.5rem auto;
+  opacity: 0.9; /* Sedikit transparan */
+}
+
+.why-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start; /* <-- PERUBAHAN DI SINI: dari 'center' ke 'start' */
+}
+
+.why-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 2rem;
+}
+
+.why-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.why-icon-item {
+  text-align: center;
+}
+
+.why-icon-item img {
+  height: 125px;
+  width: 125px;
+  margin-bottom: 0.75rem;
+  object-fit: contain;
+}
+
+.why-icon-item p {
+  font-size: 0.85rem;
+  color: #4a5568;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.why-right p {
+  font-size: 0.95rem; /* Sedikit lebih kecil dari .about-right-content */
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+/* == BAGIAN BARU: CTA BANNER SECTION == */
+.cta-banner-section {
+  position: relative; /* Penting untuk positioning pseudo-element dan content */
+  width: 100%;
+  padding: 100px 2rem; /* Ruang padding agar konten tidak menempel tepi */
+  background-image: url("/assets/images/background-divider.png"); /* Gambar background utama */
+  background-size: cover; /* Pastikan gambar menutupi seluruh area */
+  background-position: center; /* Posisikan gambar di tengah */
+  background-repeat: no-repeat;
+  color: white; /* Warna teks putih agar kontras */
+  text-align: center; /* Teks di tengah */
+  overflow: hidden; /* Penting untuk pseudo-element */
+  display: flex; /* Untuk centering konten vertikal */
+  align-items: center; /* Centering konten vertikal */
+  justify-content: center; /* Centering konten horizontal */
+  min-height: 400px; /* Tinggi minimum agar gambar terlihat */
+}
+
+.cta-banner-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/images/overlay-background-divider.png"); /* Overlay */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.6; /* Sesuaikan opasitas overlay sesuai keinginan */
+  z-index: 1; /* Pastikan overlay di bawah konten tapi di atas background utama */
+}
+
+.cta-banner-content {
+  position: relative;
+  z-index: 2; /* Pastikan konten di atas overlay */
+  max-width: 800px; /* Batasi lebar konten agar tidak terlalu panjang */
+  margin: 0 auto;
+}
+
+.cta-banner-content h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.cta-banner-content p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+/* Sesuaikan tombol CTA jika perlu agar warnanya cocok dengan background baru */
+.cta-banner-section .cta-button {
+  background: #fff; /* Tombol putih */
+  color: #4c1d95; /* Teks ungu */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-banner-section .cta-button:hover {
+  background: #f0f0f0;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* == BAGIAN BARU: NEWS/BLOG SECTION == */
+.news-section {
+  padding: 80px 2rem;
+  background: #f9f9f9; /* Sesuai background body */
+  text-align: center; /* Untuk tengahkan judul */
+  overflow: hidden;
+}
+
+.news-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Modifier untuk style garis bawah judul */
+.section-title.alt-title::after {
+  background: #4c1d95; /* Warna solid ungu */
+  height: 3px;
+  width: 50px; /* Lebih pendek */
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr; /* Kolom kiri lebih besar */
+  gap: 2.5rem;
+  text-align: left; /* Kembalikan text-align untuk konten card */
+  margin-top: 3.5rem;
+}
+
+/* Card Featured (Kiri) */
+.news-card-featured {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden; /* Agar gambar mengikuti border-radius */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card-featured:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.news-card-img-wrapper img {
+  width: 100%;
+  height: 350px; /* Tinggi gambar featured */
+  object-fit: cover;
+  display: block;
+}
+
+.news-card-content {
+  padding: 1.5rem 1.8rem;
+}
+
+.news-card-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.news-card-content p {
+  font-size: 0.95rem;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.news-card-date {
+  font-size: 0.85rem;
+  color: #718096;
+  font-weight: 500;
+}
+
+/* Kolom Kanan (List) */
+.news-col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.news-card-small {
+  display: grid; /* Gunakan grid */
+  grid-template-columns: 120px 1fr; /* Kolom 1: 120px, Kolom 2: sisa */
+  gap: 1.5rem; /* Jarak antara gambar dan teks */
+  align-items: center; /* Konten rata tengah vertikal */
+  background: #fff;
+  padding: 1.2rem; /* Padding di sekeliling card */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Jaga-jaga */
+}
+
+.news-card-small:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.news-card-small-img {
+  width: 100%; /* Lebar 100% dari kolom gridnya (120px) */
+  overflow: hidden;
+  border-radius: 8px; /* Beri radius pada wrapper gambar */
+}
+
+.news-card-small-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.news-card-small-content {
+  padding: 0;
+}
+
+.news-card-small-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.news-card-small-content .news-card-excerpt {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  /* Batasi teks jadi 2 baris */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu,
+  .nav-cta {
+    display: none;
+  }
+
+  .stat-card.full-width {
+    grid-column: 1;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+  }
+
+  .product-nav-next,
+  .product-nav-prev {
+    display: none;
+  }
+
+  .main-carousel .swiper-button-prev {
+    left: 20px;
+  }
+
+  .main-carousel .swiper-button-next {
+    right: 20px;
+  }
+
+  /* Penyesuaian 'About Section' untuk mobile */
+  .about-section {
+    padding: 60px 1.5rem;
+  }
+
+  .about-title-centered {
+    margin-bottom: 2.5rem;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr; /* Kembali ke 1 kolom */
+    gap: 2.5rem;
+  }
+
+  .about-right-content {
+    order: -1; /* Pindahkan teks ke atas gambar di mobile */
+  }
+
+  .about-img-tall {
+    height: 250px;
+  }
+
+  .about-col-right .about-img {
+    height: 250px;
+  }
+  /* --- */
+
+  .stat-item h3 {
+    font-size: 1.8rem;
+  }
+
+  /* 'Why Section' RESPONSIVE */
+  .why-section {
+    padding: 60px 1.5rem;
+  }
+
+  .why-content-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .why-title {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .why-icon-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid di mobile */
+    gap: 2rem;
+  }
+
+  .why-right {
+    text-align: center; /* Teks dan tombol rata tengah di mobile */
+  }
+
+  /* 'CTA Banner' RESPONSIVE */
+  .cta-banner-section {
+    padding: 80px 1.5rem;
+    min-height: 300px;
+  }
+
+  .cta-banner-content h2 {
+    font-size: 2rem;
+  }
+
+  .cta-banner-content p {
+    font-size: 1rem;
+  }
+
+  /* 'News/Blog Section' RESPONSIVE */
+  .news-section {
+    padding: 60px 1.5rem;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr; /* Stack di mobile */
+    gap: 2rem;
+  }
+
+  .news-card-img-wrapper img {
+    height: 250px; /* Kurangi tinggi gambar di mobile */
+  }
+
+  .news-card-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .news-card-small {
+    grid-template-columns: 100px 1fr; /* Kecilkan gambar di mobile */
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .news-card-small-content h4 {
+    font-size: 1rem;
+  }
+
+  .news-card-small-content .news-card-excerpt {
+    font-size: 0.85rem;
+  }
+}
