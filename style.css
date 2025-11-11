@@ -563,7 +563,7 @@ body {
   position: relative; /* Penting untuk positioning pseudo-element dan content */
   width: 100%;
   padding: 100px 2rem; /* Ruang padding agar konten tidak menempel tepi */
-  background-image: url("/assets/images/background-divider.png"); /* Gambar background utama */
+  background-image: url("https://naufalnab.github.io/SkyMortar/assets/images/background-divider.png"); /* Gambar background utama */
   background-size: cover; /* Pastikan gambar menutupi seluruh area */
   background-position: center; /* Posisikan gambar di tengah */
   background-repeat: no-repeat;
@@ -583,7 +583,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/assets/images/overlay-background-divider.png"); /* Overlay */
+  background-image: url("https://naufalnab.github.io/SkyMortar/assets/images/overlay-background-divider.png"); /* Overlay */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
